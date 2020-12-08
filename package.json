@@ -6,7 +6,7 @@
   "author": "CraftyDragon678 <craftydragon678@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
+    "start": "ts-node -r tsconfig-paths/register --files ./src/index.ts",
     "dev": "nodemon --watch 'src/**/*' -e '*' --exec 'ts-node -r tsconfig-paths/register --files ./src/index.ts'"
   },
   "devDependencies": {
