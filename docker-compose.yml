@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  bot:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - "7390:8080"
