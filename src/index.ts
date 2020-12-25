@@ -8,16 +8,11 @@ bot.on('ready', () => {
 });
 
 const shutdown = (signal: NodeJS.Signals) => {
-  let done = false;
-  return (() => {
-    if (!done) {
-      done = true;
-      console.log(signal);
-      bot.destroy();
-    }
-  });
+  console.log(signal);
+  bot.destroy();
+  process.exit(0);
 }
 
 (<NodeJS.Signals[]>['SIGINT', 'SIGTERM', 'SIGUSR2']).forEach((signal) => {
-  process.on(signal, shutdown(signal));
+  process.on(signal, shutdown);
 });
