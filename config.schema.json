@@ -8,6 +8,13 @@
     "token": {
       "type": "string",
       "description": "token of bot"
+    },
+    "owner": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "owner"
     }
   }
 }
